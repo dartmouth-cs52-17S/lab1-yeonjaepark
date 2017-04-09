@@ -1,0 +1,330 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Amatic SC;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.main-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+}
+
+.loading-page {
+  background-image: url(photos/blueberries.jpg);
+  background-size: cover;
+  height: 760px;
+}
+
+.nav-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 1em;
+}
+
+.nav-container li:first-child {
+  margin-right: auto;
+  font-size: 30px;
+}
+
+.nav-container li:last-child {
+  border: black solid;
+  border-color: #515B7D;
+}
+
+.nav-container li {
+  margin-right: 25px;
+  font-size: 25px;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-radius: 10px;
+}
+
+.nav-container li:not(.logo):hover {
+  background-color: rgba(100, 100, 100, 0.2);
+}
+
+.nav-container a {
+  text-decoration: none;
+  color: #515B7D;
+  font-family: Amatic SC;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.home-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-family: Amatic SC;
+  height: 690px;
+  margin-right: 3em;
+}
+
+.home-container h1 {
+  font-size: 80px;
+  margin-bottom: 0;
+  color: #3F4356;
+}
+
+.home-container p {
+  font-size: 30px;
+  margin: 0 0 20px 0;
+  color: #6F7691;
+}
+
+.email-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  border-radius: 20px;
+  background-color: rgba(100, 100, 100, 0.5);
+  padding: 1.25em;
+  margin-bottom: 60px;
+}
+
+.email-container p {
+  font-size: 20px;
+  color: white;
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+
+input {
+  height: 50px;
+  width: 300px;
+  border-radius: 5px;
+  font-size: 25px;
+  font-family: Amatic SC;
+}
+
+button {
+  height: 50px;
+  width: 80px;
+  font-size: 25px;
+  font-family: Amatic SC;
+  background-color: #D5D9EE;
+  border: none;
+  border-radius: 10px;
+  color: #3F4356;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c2c8e8;
+}
+
+.link-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  color: #3F4356;
+  font-family: Amatic SC;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: 8em;
+  margin-right: 8em;
+}
+
+.link-container ul {
+  margin: 0;
+  padding: 0;
+}
+
+.link-container li:first-child {
+  font-size: 30px;
+  cursor: default;
+}
+
+.link-container li {
+  margin-bottom: 8px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.link-container li:not(.header):hover {
+  font-weight: bold;
+}
+
+.mobile-link {
+  display: none;
+}
+
+footer {
+  font-family: Amatic SC;
+  background-color: #D5D9EE;
+  height: 70px;
+}
+
+.footer-container {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  align-items: center;
+}
+
+.footer-container li {
+  margin-right: 30px;
+  font-size: 30px;
+}
+
+.footer-container li:first-child {
+  margin-right: 50px;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+
+
+@media only screen and (max-width: 640px) {
+  .loading-page {
+    background-image: url(photos/blueberries-mobile.jpg);
+  }
+
+  .home-container {
+    flex-flow: column wrap;
+    align-items: center;
+    margin: 0;
+  }
+
+  .nav-container {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 2em;
+  }
+
+  .mobile-nav li:not(.logo):hover {
+    background-color: rgba(100, 100, 100, 0.2);
+  }
+
+  .mobile-nav a {
+    text-decoration: none;
+    color: #515B7D;
+    font-family: Amatic SC;
+    font-size: 30px;
+    padding: 5px;
+  }
+
+  .mobile-nav li:last-child {
+    border: black solid;
+    border-color: #515B7D;
+    border-radius: 10px;
+  }
+
+  .home-container h1 {
+    font-size: 70px;
+    text-align: center;
+  }
+
+  .home-container p {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .email-container {
+    margin-bottom: 20px;
+  }
+
+  .email-container form {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  .email-container button {
+    margin-top: 10px;
+    width: 300px;
+  }
+
+  .email-container p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .link-container {
+    display: none;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-link {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    font-family: Amatic SC;
+    color: #3F4356;
+    font-size: 30px;
+    padding: 0;
+    margin: 8px 0 8px;
+  }
+
+  .mobile-link input {
+    display: none;
+  }
+
+  .links {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 8px 0 8px 0;
+  }
+
+  .links i {
+    cursor: pointer;
+    transition: transform .5s ease-in-out
+  }
+
+  .links i:hover {
+    transform: rotate(360deg);
+  }
+
+  .link {
+    height: 0px;
+    display: flex;
+    flex-flow: column; nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    transition: height .8s;
+  }
+
+  .link li {
+    cursor: pointer;
+  }
+
+  input[type="checkbox"]:checked ~ .link {
+    height: 190px;
+    border-top: #515B7D dashed 1px;
+    border-bottom: #515B7D dashed 1px;
+  }
+}
