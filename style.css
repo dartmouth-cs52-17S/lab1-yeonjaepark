@@ -242,7 +242,7 @@ footer a {
   }
 
   .home-container p {
-    font-size: 30px;
+    font-size: 28px;
     text-align: center;
   }
 
@@ -256,9 +256,13 @@ footer a {
     align-items: center;
   }
 
+  input {
+    width: 250px;
+  }
+
   .email-container button {
     margin-top: 10px;
-    width: 300px;
+    width: 250px;
   }
 
   .email-container p {
